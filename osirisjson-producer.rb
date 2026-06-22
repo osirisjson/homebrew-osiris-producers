@@ -5,21 +5,21 @@
 class OsirisjsonProducer < Formula
   desc "Generate private point-in-time infrastructure snapshots from hyperscalers, hosting and cloud providers and on-premises IT/OT systems as vendor-neutral OSIRIS JSON ready for reports, diagrams, audits, diffs, CMDB/IPAM/DCIM workflows and controlled AI/MCP context."
   homepage "https://osirisjson.org"
-  version "0.6.0"
+  version "0.6.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/osirisjson/osiris-producers/releases/download/v0.6.0/osiris-producers_0.6.0_darwin_amd64.tar.gz"
-      sha256 "a294865afec82be1a586cd739b09f9592599f780d58ee6ac00ef9b7ee662457c"
+      url "https://github.com/osirisjson/osiris-producers/releases/download/v0.6.1/osiris-producers_0.6.1_darwin_amd64.tar.gz"
+      sha256 "80c6a5464a2dc4c18fb1eafb1cf5b9c7d4952812e84259b89c8e561cc8f601ee"
 
       define_method(:install) do
         bin.install "osirisjson-producer"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/osirisjson/osiris-producers/releases/download/v0.6.0/osiris-producers_0.6.0_darwin_arm64.tar.gz"
-      sha256 "d4f7821d845dfbcc5ec2199384c24c99512b9c695a2c1e1d96376f8659404f5f"
+      url "https://github.com/osirisjson/osiris-producers/releases/download/v0.6.1/osiris-producers_0.6.1_darwin_arm64.tar.gz"
+      sha256 "6e5978e8bfdcd989b36ab1c63c2f9c642d294f2e69387a34c2d146a15774f473"
 
       define_method(:install) do
         bin.install "osirisjson-producer"
@@ -29,15 +29,15 @@ class OsirisjsonProducer < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/osirisjson/osiris-producers/releases/download/v0.6.0/osiris-producers_0.6.0_linux_amd64.tar.gz"
-      sha256 "cb3d675014ee29c5b88019f96293cad4fa6f781594d37e3c8afa686a144aac0c"
+      url "https://github.com/osirisjson/osiris-producers/releases/download/v0.6.1/osiris-producers_0.6.1_linux_amd64.tar.gz"
+      sha256 "0ea238fcd0815ad6393c88bf1435968699e343e0764731528aaa5f5acba90231"
       define_method(:install) do
         bin.install "osirisjson-producer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/osirisjson/osiris-producers/releases/download/v0.6.0/osiris-producers_0.6.0_linux_arm64.tar.gz"
-      sha256 "bebee74e805113034f4a15325b451d7ace47709260614713ee1845b60f2ae90e"
+      url "https://github.com/osirisjson/osiris-producers/releases/download/v0.6.1/osiris-producers_0.6.1_linux_arm64.tar.gz"
+      sha256 "a69f9dca2dd2c7c99aba868aebe913e2f42b7f3f57f5ddbb2e55a15e32c54ac2"
       define_method(:install) do
         bin.install "osirisjson-producer"
       end
